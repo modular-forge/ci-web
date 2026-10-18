@@ -1,0 +1,12 @@
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+    # Espera 7 días antes de proponer una versión recién publicada (las de seguridad no esperan).
+    cooldown:
+      default-days: 7
+    groups:
+      acciones:
+        patterns: ["*"]
